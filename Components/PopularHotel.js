@@ -1,0 +1,202 @@
+import React from 'react'
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
+import CustomButton from '../Components/CustomButton'
+import Styles from '../styles/PopularMakeup.module.css'
+import Image from 'next/image';
+
+const PopularHotel = () => {
+
+    const responsive = {
+        superLargeDesktop: {
+            // the naming can be any, depends on you.
+            breakpoint: { max: 4000, min: 3000 },
+            items: 4
+        },
+        desktop: {
+            breakpoint: { max: 3000, min: 1024 },
+            items: 4
+        },
+        tablet: {
+            breakpoint: { max: 1024, min: 464 },
+            items: 3
+        },
+        mobile: {
+            breakpoint: { max: 464, min: 0 },
+            items: 1
+        }
+    };
+    return (
+        <div className={`py-60 bg-grey`} >
+            <div className=" px-4">
+
+                <div className="title-container text-center">
+                    <h2>Popular Hotel</h2>
+                    <p className='text-gray'>
+                        A short description for showcase of Popular Make up.
+                    </p>
+                </div>
+
+
+                <Carousel
+                    responsive={responsive}
+                    infinite={true}
+                    ssr={true}
+                    swipeable={true}
+                    draggable={true}
+                    arrows={false}
+                    centerMode={true}
+                    customButtonGroup={<CustomButton />}
+                    itemClass={Styles.carousel_item}
+                    containerClass={'py-5'}
+                >
+                    <div className={Styles.cr_container} >
+                        <div className={`${Styles.cr_img_wrapper} w-100 position-relative`}>
+                            <Image
+                                src={'https://www.wedcell.com/assetss/images/product_image/618fac5128bbe.jpg'}
+                                layout='fill'
+                                objectFit='cover'
+                            />
+
+                        </div>
+                        <div className="cr-body">
+                            <div className="cr-info px-2 py-2 ">
+                               <h4>Ramada Plaza</h4>
+                            </div>
+                            <div className={`cr-footer p-3  ${Styles.br_top}`}>
+                                <div className="price d-flex align-items-center  justify-content-between">
+
+                                    <span className="d-block f-bold">Room Price</span>
+                                    <span className="d-block">12,000</span>
+
+                                </div>
+
+                                <div className="hotel-food-info d-flex align-items-center  justify-content-between text-gray">
+                                    <span>Veg Per Plate</span>
+                                    <span>1400</span>
+                                </div>
+                                <div className="hotel-food-info d-flex align-items-center justify-content-between text-gray">
+                                    <span>Veg Per Plate</span>
+                                    <span>1400</span>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                    <div className={Styles.cr_container} >
+                        <div className={`${Styles.cr_img_wrapper} w-100 position-relative`}>
+                            <Image
+                                src={'https://www.wedcell.com/assetss/images/product_image/618fac5128bbe.jpg'}
+                                layout='fill'
+                                objectFit='cover'
+                            />
+
+                        </div>
+                        <div className="cr-body">
+                            <div className="cr-info px-2 py-2 ">
+                               <h4>Ramada Plaza</h4>
+                            </div>
+                            <div className={`cr-footer p-3  ${Styles.br_top}`}>
+                                <div className="price d-flex align-items-center  justify-content-between">
+
+                                    <span className="d-block f-bold">Room Price</span>
+                                    <span className="d-block">12,000</span>
+
+                                </div>
+
+                                <div className="hotel-food-info d-flex align-items-center  justify-content-between text-gray">
+                                    <span>Veg Per Plate</span>
+                                    <span>1400</span>
+                                </div>
+                                <div className="hotel-food-info d-flex align-items-center justify-content-between text-gray">
+                                    <span>Veg Per Plate</span>
+                                    <span>1400</span>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div className={Styles.cr_container} >
+                        <div className={`${Styles.cr_img_wrapper} w-100 position-relative`}>
+                            <Image
+                                src={'https://www.wedcell.com/assetss/images/product_image/618fac5128bbe.jpg'}
+                                layout='fill'
+                                objectFit='cover'
+                            />
+
+                        </div>
+                        <div className="cr-body">
+                            <div className="cr-info px-2 py-2 ">
+                               <h4>Ramada Plaza</h4>
+                            </div>
+                            <div className={`cr-footer p-3  ${Styles.br_top}`}>
+                                <div className="price d-flex align-items-center  justify-content-between">
+
+                                    <span className="d-block f-bold">Room Price</span>
+                                    <span className="d-block">12,000</span>
+
+                                </div>
+
+                                <div className="hotel-food-info d-flex align-items-center  justify-content-between text-gray">
+                                    <span>Veg Per Plate</span>
+                                    <span>1400</span>
+                                </div>
+                                <div className="hotel-food-info d-flex align-items-center justify-content-between text-gray">
+                                    <span>Veg Per Plate</span>
+                                    <span>1400</span>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div className={Styles.cr_container} >
+                        <div className={`${Styles.cr_img_wrapper} w-100 position-relative`}>
+                            <Image
+                                src={'https://www.wedcell.com/assetss/images/product_image/618fac5128bbe.jpg'}
+                                layout='fill'
+                                objectFit='cover'
+                            />
+
+                        </div>
+                        <div className="cr-body">
+                            <div className="cr-info px-2 py-2 ">
+                               <h4>Ramada Plaza</h4>
+                            </div>
+                            <div className={`cr-footer p-3  ${Styles.br_top}`}>
+                                <div className="price d-flex align-items-center  justify-content-between">
+
+                                    <span className="d-block f-bold">Room Price</span>
+                                    <span className="d-block">12,000</span>
+
+                                </div>
+
+                                <div className="hotel-food-info d-flex align-items-center  justify-content-between text-gray">
+                                    <span>Veg Per Plate</span>
+                                    <span>1400</span>
+                                </div>
+                                <div className="hotel-food-info d-flex align-items-center justify-content-between text-gray">
+                                    <span>Veg Per Plate</span>
+                                    <span>1400</span>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                   
+
+
+
+                </Carousel >
+            </div>
+
+        </div >
+    )
+}
+
+export default PopularHotel
