@@ -10,9 +10,7 @@ export const login = (mobile, password) => async (dispatch) => {
       mobile,
       password,
     });
-    console.log('====================================');
-    console.log(response);
-    console.log('====================================');
+  
     dispatch({
       type: "LOGIN_FULFILLED",
       payload: response.data,

@@ -8,6 +8,8 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import Sidebar from "./Sidebar";
 import Search from "./Search";
 import Link from "next/link";
+import { useSelector, useDispatch } from "react-redux";
+import { Getallitems } from "../redux/actions/HomeActions";
 
 const Header = () => {
   const [show, setShow] = useState(false);
@@ -28,11 +30,6 @@ const Header = () => {
     };
   }, []);
 
-
-
-
-
-
   return (
     <div
       className="nav-bar-wrapper w-100"
@@ -40,11 +37,8 @@ const Header = () => {
         transition: "all 450ms",
         position: show ? "fixed" : "relative",
         zIndex: "100",
-        top:'0'
+        top: "0",
       }}
-
-
-
     >
       <div
         className={`${Styles.top_nav_container} bg-black py-2`}
@@ -97,8 +91,7 @@ const Header = () => {
         </div>
       </div>
       <div className="bottm-nav px-4 py-2 primary-bg d-flex align-items-center justify-content-between position-relative ">
-        <Link href={'/'}
-          passHref>
+        <Link href={"/"} passHref>
           <div className="logo-container">
             <Image
               src={"https://www.wedcell.com/assets/front/images/logo.png"}
@@ -324,7 +317,7 @@ const Header = () => {
             </div>
           </div>
           <div className={`${Styles.nav_link} `}>
-            <Link href='/blogs'>
+            <Link href="/blogs">
               <a className="d-block text-white">Blog</a>
             </Link>
           </div>
@@ -336,17 +329,11 @@ const Header = () => {
               <FaChevronDown />
             </span>
             <div className={Styles.dropdown}>
-              <Link href='/vendor-login'>
-              <a  className={Styles.dropdown_link}>
-                {" "}
-                Vendor Login{" "}
-              </a>
+              <Link href="/vendor-login">
+                <a className={Styles.dropdown_link}> Vendor Login </a>
               </Link>
               <Link href="/customer-login">
-              <a  className={Styles.dropdown_link}>
-                {" "}
-                Customer Login{" "}
-              </a>
+                <a className={Styles.dropdown_link}> Customer Login </a>
               </Link>
             </div>
           </div>
